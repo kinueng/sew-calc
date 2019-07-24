@@ -1,5 +1,7 @@
 title: Sew Calculator
 description: Calculators to help sewers determine how much fabric is needed for their quilting projects
+url: https://sewcalc.kinueng.com/
+author: Kin Ueng
 
 plugins:
   - jekyll-seo-tag
