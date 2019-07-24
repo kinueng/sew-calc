@@ -1,2 +1,5 @@
+title: Sew Calculator
+description: Calculators to help sewers determine how much fabric is needed for their quilting projects
+
 plugins:
   - jekyll-seo-tag
