@@ -4,4 +4,5 @@ url: https://sewcalc.kinueng.com/
 author: Kin Ueng
 
 plugins:
+  - jekyll-sitemap
   - jekyll-seo-tag

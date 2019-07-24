@@ -9,4 +9,4 @@ FROM jekyll/jekyll:stable
 
 # Install eslint globally
 RUN npm install -g eslint \
-    && gem install jekyll-seo-tag
+    && gem install jekyll-seo-tag jekyll-sitemap
