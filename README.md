@@ -1,2 +1,2 @@
 # sew-calc
-Calculator for sewing and quilting
+Free calculator for sewing and quilting without all the clutter and advertisements 
