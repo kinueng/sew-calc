@@ -4,66 +4,91 @@ title: Sewing Calculator
 
 <!DOCTYPE HTML>
 <html>
-	<head>
-        {% seo %}
-		<link rel="stylesheet" href="css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+    {% seo %}
+    <link rel="stylesheet" href="css/main.css" />
+</head>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<strong>Quilt Backing Calulator</strong>
-									<ul class="icons">
-										<li><a href="https://github.com/kinueng/sew-calc" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</header>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-									</div>
-								</section>
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
 
-						</div>
-					</div>
+                <!-- Header -->
+                <header id="header">
+                    <strong>Quilt Backing Calulator</strong>
+                    <ul class="icons">
+                        <li><a href="https://github.com/kinueng/sew-calc" target="_blank" rel="noopener noreferrer"
+                                class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+                <!-- Banner -->
+                <section id="banner">
+                    <div class="content">
+                        <form method="post" action="#" _lpchecked="1">
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-xsmall">
+                                    Width (inches):<br>
+                                    <input type="text" name="width" id="width" value="" placeholder="">
+                                </div>
+                                <div class="col-6 col-12-xsmall">
+                                    Height (inches):<br>
+                                    <input type="email" name="height" id="height" value="" placeholder="">
+                                </div>
+                                <div class="col-12-xsmall">
+                                    <!-- Box -->
+                                    <h3>Result</h3>
+                                    <div class="box">
+                                        <h1 id='output'></h1>
+                                    </div>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Calculators</h2>
-									</header>
-									<ul>
-                                        <li><a href="index.html">Quilt Backing</a></li>
-									</ul>
-								</nav>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Kin Ueng <br> All rights reserved. <br> Design: <a href="https://html5up.net">HTML5 UP</a></p>
-								</footer>
+            </div>
+        </div>
 
-						</div>
-					</div>
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
 
-			</div>
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Calculators</h2>
+                    </header>
+                    <ul>
+                        <li><a href="index.html">Quilt Backing</a></li>
+                    </ul>
+                </nav>
 
-		<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/browser.min.js"></script>
-			<script src="js/breakpoints.min.js"></script>
-			<script src="js/util.js"></script>
-			<script src="js/main.js"></script>
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Kin Ueng <br> All rights reserved. <br> Design: <a
+                            href="https://html5up.net">HTML5 UP</a></p>
+                </footer>
 
-	</body>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src='js/backing-calc.js'></script>
+</body>
+
 </html>
