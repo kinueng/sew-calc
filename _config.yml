@@ -3,6 +3,9 @@ description: Calculators to help sewers determine how much fabric is needed for 
 url: https://sewcalc.kinueng.com/
 author: Kin Ueng
 
+sass:
+    sass_dir: _sass
+    
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

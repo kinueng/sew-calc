@@ -9,6 +9,7 @@ title: Sewing Calculator
     {% seo %}
     {% include googletagmanager.html %}
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 </head>
 
 <body class="is-preload">
@@ -36,17 +37,17 @@ title: Sewing Calculator
                             <div class="row gtr-uniform">
                                 <div class="col-12">
                                     <h2>Width (inches):</h2>
-                                    <input type="number" name="width" id="width" value="" placeholder="0.0">
+                                    <input class="box" type="number" name="width" id="width" value="" placeholder="0.0" >
                                 </div>
                                 <div class="col-12">
                                     <h2>Height (inches):</h2>
-                                    <input type="number" name="height" id="height" value="" placeholder="0.0">
+                                    <input class="box" type="number" name="height" id="height" value="" placeholder="0.0">
                                 </div>
                                 <div class="col-12">
                                     <!-- Box -->
                                     <h2>Result (inches):</h2>
                                     <div class="box">
-                                        <h1 id='output'></h1>
+                                        <h1 id='output'>0.0</h1>
                                     </div>
 
                                 </div>
