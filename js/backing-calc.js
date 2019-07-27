@@ -52,7 +52,7 @@ function w_h_both_lessthan(w, h, seams) {
 
 function w_smaller_h_bigger(w, h, seams) {
     let b = w / 36;
-    let a = h + (h % 40);
+    let a = h + (40 - (h % 40)); // Raise to next factor of 40
     a /= 40;
     let y = a * b;
     if(y % 1/8 === 0 || y % 1/3 === 0) {
@@ -87,7 +87,7 @@ function w_bigger_h_smaller(w, h, seams) {
     }
 
     let b = h / 36;
-    let a = w + (w % 40);
+    let a = w + (40 - (w % 40));
     a /= 40;
     let z = a * b;
     if (z % 1 / 8 === 0 || z % 1 / 3 === 0) {
@@ -104,7 +104,7 @@ function w_bigger_h_smaller(w, h, seams) {
 
 function w_h_both_greaterthan(w, h, seams) {
     if(w === h) {
-        let a = w + (w % 40);
+        let a = w + (40 - (w % 40));
         a /= 40;
         let b = h / 36;
         let y = a * b;
@@ -121,7 +121,7 @@ function w_h_both_greaterthan(w, h, seams) {
             seams.vertical.pierce = true;
         }
     } else {
-        let a = h + (h % 40);
+        let a = h + (40 - (h % 40));
         a /= 40;
         a = Math.ceil(a);
         let b = w / 36;
@@ -134,7 +134,7 @@ function w_h_both_greaterthan(w, h, seams) {
             seams.horizontal.pierce = true;
         }
 
-        let c = w + (w % 40);
+        let c = w + (40 - (w % 40));
         c /= 40;
         c = Math.ceil(c);
         let d = h / 36;
@@ -154,11 +154,11 @@ function w_h_both_greaterthan(w, h, seams) {
 
 function calc(w, h) {
     let defaultSeams = { 'vertical': { 'output': -1, 'pierce': false }, 'horizontal': { 'output': -1, 'pierce': false } };
-    if (w < 40 && h < 40) {
+    if (w <= 40 && h <= 40) {
         return w_h_both_lessthan(w, h, defaultSeams);
-    } else if (w < 40 && h > 40) {
+    } else if (w <= 40 && h > 40) {
         return w_smaller_h_bigger(w, h, defaultSeams);
-    } else if ((w > 40 && h < 40)) {
+    } else if (w > 40 && h <= 40) {
         return w_bigger_h_smaller(w, h, defaultSeams);
     } else if (w > 40 && h > 40) {
         return w_h_both_greaterthan(w, h, defaultSeams);
