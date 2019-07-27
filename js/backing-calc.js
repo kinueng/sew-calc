@@ -59,16 +59,16 @@ function w_smaller_h_bigger(w, h, seams) {
         seams.horizontal.output = y;
         seams.horizontal.pierce = true;
     } else {
-        seams.vertical.output = roundToNearestFraction(y);
-        seams.vertical.pierce = true;
+        seams.horizontal.output = roundToNearestFraction(y);
+        seams.horizontal.pierce = true;
     }
 
     let z = h / 36;
     if (z % 1 / 8 === 0 || z % 1 / 3 === 0) {
         // Vertical seams do not need to be
         // rounded up
-        seams.horizontal.output = z;
-        seams.horizontal.pierce = false;
+        seams.vertical.output = z;
+        seams.vertical.pierce = false;
     } else {
         seams.vertical.output = roundToNearestFraction(z);
         seams.vertical.pierce = false;
