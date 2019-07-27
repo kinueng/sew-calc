@@ -8,7 +8,7 @@ function calcBacking() {
     }
     let houtput = document.getElementById("h-output");
     let voutput = document.getElementById("v-output");
-    const seams = calc(width, height);
+    const seams = calc(width + 10, height + 10);
     houtput.innerText = seams.horizontal.output + " yds";
     voutput.innerText = seams.vertical.output + " yds";
 }
