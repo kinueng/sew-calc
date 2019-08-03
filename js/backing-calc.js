@@ -104,7 +104,10 @@ function w_bigger_h_smaller(w, h, seams) {
 
 function w_h_both_greaterthan(w, h, seams) {
     if(w === h) {
-        let a = w + (40 - (w % 40));
+        let a = w;
+        if(w % 40 !== 0) {
+            a = w + (40 - (w % 40));
+        }
         a /= 40;
         let b = h / 36;
         let y = a * b;
@@ -121,7 +124,10 @@ function w_h_both_greaterthan(w, h, seams) {
             seams.vertical.pierce = true;
         }
     } else {
-        let a = h + (40 - (h % 40));
+        let a = h;
+        if(h % 40 !== 0) {
+            a = h + (40 - (h % 40));
+        }
         a /= 40;
         a = Math.ceil(a);
         let b = w / 36;
