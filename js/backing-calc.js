@@ -1,18 +1,3 @@
-function calcBacking() {
-    let width = document.getElementById("width").valueAsNumber;
-    let height = document.getElementById("height").valueAsNumber;
-    if (!width || !height) {
-        // One of the input fields are still blank
-        // therefore NOOP
-        return
-    }
-    let houtput = document.getElementById("h-output");
-    let voutput = document.getElementById("v-output");
-    const seams = calc(width + 10, height + 10);
-    houtput.innerText = seams.horizontal.output + " yds";
-    voutput.innerText = seams.vertical.output + " yds";
-}
-
 const _X = 40;
 const _Y = 104;
 
@@ -159,6 +144,8 @@ function w_h_both_greaterthan(w, h, seams) {
 }
 
 function calc(w, h) {
+    w += 10;
+    h += 10;
     let defaultSeams = { 'vertical': { 'output': -1, 'pierce': false }, 'horizontal': { 'output': -1, 'pierce': false } };
     if (w <= 40 && h <= 40) {
         return w_h_both_lessthan(w, h, defaultSeams);
@@ -185,12 +172,4 @@ function roundToNearestFraction(num) {
     }
 }
 
-let width = document.getElementById("width");
-let height = document.getElementById("height");
-width.addEventListener("keyup", function () {
-    calcBacking();
-});
-
-height.addEventListener("keyup", function () {
-    calcBacking();
-}); 
+module.exports = calc;
